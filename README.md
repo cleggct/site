@@ -1,6 +1,6 @@
 # Minimal WebGL Demo Site
 
-This directory hosts a suckless-style static site that bundles a few C/OpenGL ES demos, compiled to WebAssembly with Emscripten. A tiny shared runtime spins up the WebGL2 canvas and calls into each demo.
+This directory hosts a static site that bundles a few C/OpenGL ES demos, compiled to WebAssembly with Emscripten. A tiny shared runtime spins up the WebGL2 canvas and calls into each demo.
 
 ## Layout
 
@@ -57,3 +57,6 @@ make clean
 ```
 
 This removes the generated `public/index.html` and all compiled demo outputs so you can rebuild from scratch.
+
+## Note About AI Usage in this Repo
+Generative AI (gpt-5/codex) was used in the generation of this README and in troubleshooting compilation errors with the demos. The code (shaders, templates, webgl stuff) was written by me with a hefty dose of help from the emscripten documentation (https://emscripten.org/docs/)
