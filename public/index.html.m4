@@ -3,7 +3,7 @@ include(`tpl/header.html')
   <img class="profile" src="/profile.png" alt="Profile photo of Christa Clegg">
   <div class="intro-copy">
     <h1>Christa Clegg</h1>
-    <p>Junior developer in Oulu shipping tidy web apps and LLM-flavoured data tooling.</p>
+    <p>Software developer in Oulu shipping tidy web apps and LLM-flavoured data tooling.</p>
     <p class="contact">cleggct (at) gmail (dot) com · <a href="https://github.com/cleggct" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/christa-clegg/" rel="noopener">LinkedIn</a></p>
   </div>
 </section>

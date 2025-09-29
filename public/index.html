@@ -13,7 +13,7 @@
   <img class="profile" src="/profile.png" alt="Profile photo of Christa Clegg">
   <div class="intro-copy">
     <h1>Christa Clegg</h1>
-    <p>Junior developer in Oulu shipping tidy web apps and LLM-flavoured data tooling.</p>
+    <p>Software developer in Oulu shipping tidy web apps and LLM-flavoured data tooling.</p>
     <p class="contact">cleggct (at) gmail (dot) com · <a href="https://github.com/cleggct" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/christa-clegg/" rel="noopener">LinkedIn</a></p>
   </div>
 </section>
@@ -644,13 +644,13 @@ void demo_app_update_mouse(float x, float y, int present) {
 
 #define MAX_BOIDS 160
 #define NEIGHBOR_RADIUS 80.0f
-#define SEPARATION_RADIUS 90.0f
-#define MAX_SPEED 600.0f
-#define MAX_FORCE 180.0f
+#define SEPARATION_RADIUS 70.0f
+#define MAX_SPEED 400.0f
+#define MAX_FORCE 200.0f
 #define VELOCITY_DAMP_ACTIVE 0.985f
-#define VELOCITY_DAMP_IDLE 0.9995f
+#define VELOCITY_DAMP_IDLE 0.9f
 #define EDGE_THRESHOLD 60.0f
-#define EDGE_FORCE 320.0f
+#define EDGE_FORCE 800.0f
 
 static int g_width = 0;
 static int g_height = 0;
@@ -838,14 +838,14 @@ void demo_app_frame(double time_sec, double dt_sec) {
 
     if (neighbors &gt; 0) {
       float inv = 1.0f / neighbors;
-      align_x = (align_x * inv - vx) * 0.1f;
-      align_y = (align_y * inv - vy) * 0.1f;
+      align_x = (align_x * inv - vx) * 1.2f;
+      align_y = (align_y * inv - vy) * 1.2f;
 
-      cohesion_x = ((cohesion_x * inv) - px) * 0.08f;
-      cohesion_y = ((cohesion_y * inv) - py) * 0.08f;
+      cohesion_x = ((cohesion_x * inv) - px) * 0.008f;
+      cohesion_y = ((cohesion_y * inv) - py) * 0.008f;
 
-      separation_x *= 0.35f;
-      separation_y *= 0.35f;
+      separation_x *= 10.0f;
+      separation_y *= 10.0f;
 
       accel_x += align_x + cohesion_x + separation_x;
       accel_y += align_y + cohesion_y + separation_y;
