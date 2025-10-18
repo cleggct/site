@@ -1,0 +1,36 @@
+---
+layout: base.njk
+title: "Christa Clegg — WebGL Demos"
+---
+<section class="intro">
+  <img class="profile" src="/profile.png" alt="Profile photo of {{ site.owner }}">
+  <div class="intro-copy">
+    <h1>{{ site.owner }}</h1>
+    <p>{{ site.intro.tagline }}</p>
+    <p class="contact">{{ site.intro.contact | safe }}</p>
+  </div>
+</section>
+
+<p class="overview">C/OpenGL ES experiments compiled to WebAssembly. Click or tap a canvas to launch it; it pauses automatically when scrolled off screen.</p>
+
+{% for demo in demos %}
+  <section class="demo">
+    <h2>{{ demo.title }}</h2>
+    <p>{{ demo.description }}</p>
+    <noscript>
+      <p>Enable JavaScript to run the WebGL demo. The source lives in <code>{{ demo.source }}</code>.</p>
+    </noscript>
+    <canvas
+      data-module="/demos/{{ demo.id }}/{{ demo.id }}.js"
+      data-width="{{ demo.width }}"
+      data-height="{{ demo.height }}"
+      data-poster="{{ demo.poster }}"
+    ></canvas>
+    <details class="source">
+      <summary>Source: <code>{{ demo.source }}</code></summary>
+      {% codeSnippet demo.source %}
+    </details>
+  </section>
+{% endfor %}
+
+<script type="module" src="/demos/loader.js"></script>

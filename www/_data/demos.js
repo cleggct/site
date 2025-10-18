@@ -1,0 +1,38 @@
+module.exports = [
+  {
+    id: "tri",
+    title: "Rotating Triangle",
+    description: "Classic GL triangle with a rotation and a brightening color pulse.",
+    width: 640,
+    height: 360,
+    poster: "/posters/tri.png",
+    source: "src/tri.c",
+  },
+  {
+    id: "plasma",
+    title: "Plasma Shader",
+    description: "Full-screen plasma driven by layered sine waves and a little swirl math.",
+    width: 640,
+    height: 360,
+    poster: "/posters/plasma.png",
+    source: "src/plasma.c",
+  },
+  {
+    id: "mandelbrot",
+    title: "Mandelbrot Explorer",
+    description: "Keyboard-driven Mandelbrot (arrows to pan, Z/X to zoom) rendered in plain GLSL.",
+    width: 640,
+    height: 360,
+    poster: "/posters/mandelbrot.png",
+    source: "src/mandelbrot.c",
+  },
+  {
+    id: "boids",
+    title: "Boids",
+    description: "Flocking simulation that follows your pointer; once it leaves the canvas a velocity damping term settles the flock.",
+    width: 640,
+    height: 360,
+    poster: "/posters/boids.png",
+    source: "src/boids.c",
+  },
+];

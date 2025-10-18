@@ -1,0 +1,12 @@
+{
+  "name": "wasm-demos-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "ELEVENTY_ENV=production eleventy",
+    "watch": "eleventy --watch --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

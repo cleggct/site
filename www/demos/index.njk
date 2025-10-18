@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: "Download the WebAssembly Demos"
+---
+<h1>Download the WebAssembly Demos</h1>
+<p>Each build bundles <code>src/runtime_webgl.c</code> with the demo source.</p>
+<ul>
+  {% for demo in demos %}
+    <li>
+      <strong>{{ demo.title }}</strong>
+      <ul>
+        <li><a href="/demos/{{ demo.id }}/{{ demo.id }}.js" download>{{ demo.id }}.js</a></li>
+        <li><a href="/demos/{{ demo.id }}/{{ demo.id }}.wasm" download>{{ demo.id }}.wasm</a></li>
+      </ul>
+    </li>
+  {% endfor %}
+</ul>

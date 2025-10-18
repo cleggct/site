@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Christa's Site and WASM Demos</title>
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="stylesheet" href="/style.css">
-<body>
-<header><a href="/">Home</a> · <a href="/demos/">Demos</a></header>
-<main>
-
-<section class="intro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Christa Clegg — WebGL Demos</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header><a href="/">Home</a> · <a href="/demos/">Demos</a></header>
+    <main>
+      <section class="intro">
   <img class="profile" src="/profile.png" alt="Profile photo of Christa Clegg">
   <div class="intro-copy">
     <h1>Christa Clegg</h1>
@@ -20,16 +21,22 @@
 
 <p class="overview">C/OpenGL ES experiments compiled to WebAssembly. Click or tap a canvas to launch it; it pauses automatically when scrolled off screen.</p>
 
-<section class="demo">
-  <h2>Rotating Triangle</h2>
-  <p>Classic GL triangle with a rotation and a brightening color pulse.</p>
-  <noscript>
-    <p>Enable JavaScript to run the WebGL demo. The source lives in <code>src/tri.c</code>.</p>
-  </noscript>
-  <canvas data-module="/demos/tri/tri.js" data-width="640" data-height="360" data-poster="/posters/tri.png"></canvas>
-  <details class="source">
-    <summary>Source: <code>src/tri.c</code></summary>
-    <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
+
+  <section class="demo">
+    <h2>Rotating Triangle</h2>
+    <p>Classic GL triangle with a rotation and a brightening color pulse.</p>
+    <noscript>
+      <p>Enable JavaScript to run the WebGL demo. The source lives in <code>src/tri.c</code>.</p>
+    </noscript>
+    <canvas
+      data-module="/demos/tri/tri.js"
+      data-width="640"
+      data-height="360"
+      data-poster="/posters/tri.png"
+    ></canvas>
+    <details class="source">
+      <summary>Source: <code>src/tri.c</code></summary>
+      <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
 #include &lt;math.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stddef.h&gt;
@@ -207,20 +214,24 @@ void demo_app_update_mouse(float x, float y, int present) {
   (void)x; (void)y; (void)present;
 }
 </code></pre>
+    </details>
+  </section>
 
-  </details>
-</section>
-
-<section class="demo">
-  <h2>Plasma Shader</h2>
-  <p>Full-screen plasma driven by layered sine waves and a little swirl math.</p>
-  <noscript>
-    <p>Enable JavaScript to run the WebGL demo. The source lives in <code>src/plasma.c</code>.</p>
-  </noscript>
-  <canvas data-module="/demos/plasma/plasma.js" data-width="640" data-height="360" data-poster="/posters/plasma.png"></canvas>
-  <details class="source">
-    <summary>Source: <code>src/plasma.c</code></summary>
-    <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
+  <section class="demo">
+    <h2>Plasma Shader</h2>
+    <p>Full-screen plasma driven by layered sine waves and a little swirl math.</p>
+    <noscript>
+      <p>Enable JavaScript to run the WebGL demo. The source lives in <code>src/plasma.c</code>.</p>
+    </noscript>
+    <canvas
+      data-module="/demos/plasma/plasma.js"
+      data-width="640"
+      data-height="360"
+      data-poster="/posters/plasma.png"
+    ></canvas>
+    <details class="source">
+      <summary>Source: <code>src/plasma.c</code></summary>
+      <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
 #include &lt;math.h&gt;
 #include &lt;stddef.h&gt;
 #ifdef DEBUG
@@ -393,20 +404,24 @@ void demo_app_update_mouse(float x, float y, int present) {
   (void)x; (void)y; (void)present;
 }
 </code></pre>
+    </details>
+  </section>
 
-  </details>
-</section>
-
-<section class="demo">
-  <h2>Mandelbrot Explorer</h2>
-  <p>Keyboard-driven Mandelbrot (arrows to pan, Z/X to zoom) rendered in plain GLSL.</p>
-  <noscript>
-    <p>Enable JavaScript to run the WebGL demo. The source lives in <code>src/mandelbrot.c</code>.</p>
-  </noscript>
-  <canvas data-module="/demos/mandelbrot/mandelbrot.js" data-width="640" data-height="360" data-poster="/posters/mandelbrot.png"></canvas>
-  <details class="source">
-    <summary>Source: <code>src/mandelbrot.c</code></summary>
-    <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
+  <section class="demo">
+    <h2>Mandelbrot Explorer</h2>
+    <p>Keyboard-driven Mandelbrot (arrows to pan, Z/X to zoom) rendered in plain GLSL.</p>
+    <noscript>
+      <p>Enable JavaScript to run the WebGL demo. The source lives in <code>src/mandelbrot.c</code>.</p>
+    </noscript>
+    <canvas
+      data-module="/demos/mandelbrot/mandelbrot.js"
+      data-width="640"
+      data-height="360"
+      data-poster="/posters/mandelbrot.png"
+    ></canvas>
+    <details class="source">
+      <summary>Source: <code>src/mandelbrot.c</code></summary>
+      <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
 #include &lt;math.h&gt;
 #include &lt;stddef.h&gt;
 #include &lt;string.h&gt;
@@ -622,20 +637,24 @@ void demo_app_update_mouse(float x, float y, int present) {
   (void)x; (void)y; (void)present;
 }
 </code></pre>
+    </details>
+  </section>
 
-  </details>
-</section>
-
-<section class="demo">
-  <h2>Boids</h2>
-  <p>Flocking simulation that follows your pointer; once it leaves the canvas a velocity damping term settles the flock.</p>
-  <noscript>
-    <p>Enable JavaScript to run this demo. The source lives in <code>src/boids.c</code>.</p>
-  </noscript>
-  <canvas data-module="/demos/boids/boids.js" data-width="640" data-height="360" data-poster="/posters/boids.png"></canvas>
-  <details class="source">
-    <summary>Source: <code>src/boids.c</code></summary>
-    <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
+  <section class="demo">
+    <h2>Boids</h2>
+    <p>Flocking simulation that follows your pointer; once it leaves the canvas a velocity damping term settles the flock.</p>
+    <noscript>
+      <p>Enable JavaScript to run the WebGL demo. The source lives in <code>src/boids.c</code>.</p>
+    </noscript>
+    <canvas
+      data-module="/demos/boids/boids.js"
+      data-width="640"
+      data-height="360"
+      data-poster="/posters/boids.png"
+    ></canvas>
+    <details class="source">
+      <summary>Source: <code>src/boids.c</code></summary>
+      <pre><code class="language-c">#include &lt;GLES3/gl3.h&gt;
 #include &lt;math.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;stddef.h&gt;
@@ -996,13 +1015,15 @@ void demo_app_handle_key(int key, int pressed) {
   }
 }
 </code></pre>
+    </details>
+  </section>
 
-  </details>
-</section>
 
 <script type="module" src="/demos/loader.js"></script>
-</main>
-<footer><small>No JS needed to read. JS only powers the demos.</small></footer>
-</body>
-</html>
 
+    </main>
+    <footer>
+      <small>No JS needed to read. JS only powers the demos.</small>
+    </footer>
+  </body>
+</html>
